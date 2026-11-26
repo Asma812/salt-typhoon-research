@@ -1,0 +1,6 @@
+claim_id,model,condition,run,label,evidence_passage_ids,rationale,uncertainty_preserved
+CB-001,Nemotron,closed_book_rehearsal,1,Distorted,S02-P01,"Telecommunications targeting is supported, but government entities in multiple countries are not established by the cited evidence.",no
+CB-002,Nemotron,closed_book_rehearsal,1,Unsupported/Invented,,"No passage in the reference corpus confirms spearphishing with malicious attachments.",no
+CB-003,Nemotron,closed_book_rehearsal,1,Distorted,S06-P03,"PRC state sponsorship is supported, but the MSS association is not established by the corpus.",yes
+CB-004,Nemotron,closed_book_rehearsal,1,Distorted,S07-P02,"The cited Fortinet CVE is not established as exploited by Salt Typhoon; the corpus explicitly says zero-day exploitation by this group is unknown.",yes
+CB-005,Nemotron,closed_book_rehearsal,1,Supported,S07-P03,"Tenable assesses espionage as the group's apparent primary objective.",yes

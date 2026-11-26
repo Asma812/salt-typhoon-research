@@ -1,0 +1,46 @@
+{
+  "group": "Salt Typhoon",
+  "condition": "rag_rehearsal",
+  "claims": [
+    {
+      "claim_id": "RR-001",
+      "category": "targets",
+      "claim": "Three network devices registered to a Canadian telecommunications company were compromised in mid-February 2025.",
+      "confidence": "likely",
+      "evidence_passage_ids": ["S06-P01"],
+      "support_note": "Passage states three network devices registered to a Canadian telecommunications company were compromised by likely Salt Typhoon actors in mid-February 2025."
+    },
+    {
+      "claim_id": "RR-002",
+      "category": "TTPs",
+      "claim": "The actors exploited CVE-2023-20198 to retrieve running configuration files from all three compromised devices.",
+      "confidence": "certain",
+      "evidence_passage_ids": ["S06-P02"],
+      "support_note": "Passage directly states the actors exploited CVE-2023-20198 to retrieve the running configuration files from all three devices."
+    },
+    {
+      "claim_id": "RR-003",
+      "category": "TTPs",
+      "claim": "The actors modified at least one configuration file to configure a GRE tunnel enabling traffic collection from the network.",
+      "confidence": "certain",
+      "evidence_passage_ids": ["S06-P02"],
+      "support_note": "Passage states the actors modified at least one of the files to configure a GRE tunnel, enabling traffic collection from the network."
+    },
+    {
+      "claim_id": "RR-004",
+      "category": "attribution",
+      "claim": "The responsible actors are almost certainly PRC state-sponsored actors, specifically Salt Typhoon.",
+      "confidence": "certain",
+      "evidence_passage_ids": ["S06-P03"],
+      "support_note": "Passage assesses that the responsible actors are almost certainly PRC state-sponsored actors, specifically Salt Typhoon."
+    },
+    {
+      "claim_id": "RR-005",
+      "category": "objectives",
+      "claim": "PRC cyber actors are targeting network devices and exploiting existing vulnerabilities to gain and maintain access to telecommunications service providers.",
+      "confidence": "certain",
+      "evidence_passage_ids": ["S06-P04"],
+      "support_note": "Passage states that as part of this campaign, PRC cyber actors are targeting these network devices, exploiting existing vulnerabilities to gain and maintain access to TSPs."
+    }
+  ]
+}

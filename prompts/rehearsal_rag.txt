@@ -1,0 +1,69 @@
+# REHEARSAL: RAG CONDITION
+
+## Role
+You are a Cyber Threat Intelligence (CTI) analyst.
+
+## Objective
+Produce a short evidence-based profile of Salt Typhoon.
+
+## Experimental condition
+This is a RAG test.
+Use ONLY the evidence passages supplied below.
+Do not use external knowledge or assumptions.
+
+## Evidence corpus
+{{EVIDENCE_PASSAGES}}
+
+## Instructions
+Generate exactly 5 atomic factual claims.
+
+Cover only information supported by the supplied passages:
+- Targeted organizations and devices
+- Exploited vulnerability
+- Technical actions
+- Attribution and confidence
+
+For every claim:
+- Cite the exact supporting passage IDs.
+- Do not invent facts or passage IDs.
+- Preserve uncertainty and attribution wording.
+- Distinguish what the source directly states from what it assesses.
+- Do not infer that the activity applies to every Salt Typhoon operation.
+
+## Confidence levels
+Use exactly one:
+- certain
+- likely
+- possible
+- unknown
+
+## Allowed categories
+Use exactly one:
+- objectives
+- capabilities
+- resources
+- targets
+- TTPs
+- attribution
+
+## Output format
+Return ONLY valid JSON.
+
+{
+  "group": "Salt Typhoon",
+  "condition": "rag_rehearsal",
+  "claims": [
+    {
+      "claim_id": "RR-001",
+      "category": "targets",
+      "claim": "One factual statement.",
+      "confidence": "likely",
+      "evidence_passage_ids": ["S06-P01"],
+      "support_note": "Brief note identifying what the cited passage supports."
+    }
+  ]
+}
+
+Use unique claim IDs starting with RR-001.
+Return exactly 5 claims.
+Return valid JSON only.

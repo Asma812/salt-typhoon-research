@@ -1,0 +1,6 @@
+claim_id,model,condition,run,label,evidence_passage_ids,rationale,uncertainty_preserved
+RR-001,Nemotron,rag_rehearsal,1,Supported,S06-P01,"Faithful to the source; likely attribution preserved.",yes
+RR-002,Nemotron,rag_rehearsal,1,Supported,S06-P02,"CVE exploitation and configuration retrieval accurately reported.",yes
+RR-003,Nemotron,rag_rehearsal,1,Supported,S06-P02,"GRE tunnel configuration and traffic collection accurately reported.",yes
+RR-004,Nemotron,rag_rehearsal,1,Distorted,S06-P03,"Almost certainly was converted into certain.",no
+RR-005,Nemotron,rag_rehearsal,1,Supported,S06-P04,"Supported by the source; TTPs is a better category than objectives.",yes

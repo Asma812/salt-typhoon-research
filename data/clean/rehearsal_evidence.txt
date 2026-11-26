@@ -1,0 +1,11 @@
+[S06-P01]
+Three network devices registered to a Canadian telecommunications company were compromised by likely Salt Typhoon actors in mid-February 2025.
+
+[S06-P02]
+The actors exploited CVE-2023-20198 to retrieve the running configuration files from all three devices and modified at least one of the files to configure a GRE tunnel, enabling traffic collection from the network.
+
+[S06-P03]
+The responsible actors are almost certainly PRC state-sponsored actors, specifically Salt Typhoon.
+
+[S06-P04]
+As part of this campaign, PRC cyber actors are targeting these network devices, exploiting existing vulnerabilities to gain and maintain access to TSPs.

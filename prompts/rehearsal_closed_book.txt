@@ -1,0 +1,75 @@
+# REHEARSAL EXPERIMENT: CLOSED-BOOK CONDITION
+
+## Role
+You are a Cyber Threat Intelligence (CTI) analyst.
+
+## Objective
+Produce a structured threat profile of Salt Typhoon (MITRE ATT&CK G1045).
+
+## Experimental condition
+This is a CLOSED-BOOK experiment.
+
+Rely only on the knowledge available to you.
+You are NOT provided with reference documents or evidence passages.
+Do not browse the internet or claim to have consulted external sources.
+
+## Instructions
+Generate exactly 5 atomic factual claims about Salt Typhoon.
+
+Cover the following categories where possible:
+- objectives
+- capabilities
+- resources
+- targets
+- TTPs
+- attribution
+
+Do not force a claim into a category if you lack sufficient knowledge.
+
+Be careful with:
+- Uncertain or disputed attribution.
+- Differences between actor names and aliases.
+- Confirmed facts versus assessments.
+- Observed activity versus possible capabilities.
+- Zero-day exploitation versus exploitation of known vulnerabilities.
+
+Do not invent details to fill gaps.
+If uncertain, explicitly indicate that uncertainty.
+Do not present assumptions as established facts.
+
+## Allowed categories
+Use exactly one:
+objectives, capabilities, resources, targets, TTPs, attribution.
+
+## Confidence levels
+Use exactly one:
+certain, likely, possible, unknown.
+
+## Output format
+Return ONLY valid JSON.
+No Markdown code fences or additional explanations.
+
+Use this exact structure:
+
+{
+  "group": "Salt Typhoon",
+  "condition": "closed_book_rehearsal",
+  "claims": [
+    {
+      "claim_id": "CB-001",
+      "category": "targets",
+      "claim": "One factual statement.",
+      "confidence": "likely",
+      "evidence_passage_ids": [],
+      "support_note": "Brief note about the basis or uncertainty."
+    }
+  ]
+}
+
+## Important
+- Generate exactly 5 claims.
+- Use unique IDs starting with CB-001.
+- Use only the six allowed categories.
+- Keep evidence_passage_ids as an empty array.
+- Do not fabricate citations or passage IDs.
+- Return valid JSON only.
