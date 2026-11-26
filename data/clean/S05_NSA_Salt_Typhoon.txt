@@ -1,0 +1,211 @@
+An official website of the United States government
+Here's how you know
+Official websites use .gov
+A
+.gov
+website belongs to an official government organization in the United States.
+Secure .gov websites use HTTPS
+A
+lock (
+)
+or
+https://
+means you’ve safely connected to the .gov website. Share sensitive information only on official, secure websites.
+Skip to main content (Press Enter).
+Toggle navigation
+National Security Agency/Central Security Service
+NSA/CSS
+Search
+Search NSA:
+Search
+Search NSA:
+Search
+About
+Leadership
+Mission & Combat Support
+Cybersecurity
+Cybersecurity Advisories
+Post-Quantum Cryptography Resource Hub
+Zero Trust Implementation Guidelines
+Signals Intelligence
+Central Security Service
+Locations
+Research
+Cybersecurity Collaboration Center
+Collaborative Partnerships
+DIB Cybersecurity Services
+Standards and Certifications
+Super Intelligence Security Center
+Press Room
+Press Releases & Statements
+News & Highlights
+Podcast
+Declassification & Transparency Initiatives
+Telework and Mobile Security Guidance
+DoD Microelectronics Guidance
+Research Publications
+Careers
+History
+National Cryptologic Museum
+Cryptologic History
+National Cryptologic Memorial
+Home
+Press Room
+Press Releases & Statements
+Press Release View
+PHOTO INFORMATION
+Download
+Details
+Share
+CSA: Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System
+CSA: Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System
+Press Release
+| Aug. 27, 2025
+NSA and Others Provide Guidance to Counter China State-Sponsored Actors Targeting Critical Infrastructure Organizations
+FORT MEADE, Md. – The National Security Agency (NSA) and other U.S. and foreign organizations are releasing a
+joint Cybersecurity Advisory
+to expose advanced persistent threat (APT) actors sponsored by the Chinese government targeting telecommunications, government, transportation, lodging, and military infrastructure networks globally and outline appropriate mitigation guidance.
+The malicious activity outlined in the advisory partially overlaps with cybersecurity industry reporting on Chinese state-sponsored threat actors referred to by names such as Salt Typhoon.
+These activities have been linked to multiple China-based entities—including Sichuan Juxinhe Network Technology Co. Ltd., Beijing Huanyu Tianqiong Information Technology Co., Ltd., and Sichuan Zhixin Ruijie Network Technology Co., Ltd.—which provide cyber products and services to China’s Ministry of State Security and People’s Liberation Army.
+The CSA, “
+Countering Chinese State-Sponsored Actors Compromise of Networks Worldwide to Feed Global Espionage System
+,” details specific tactics, techniques, and procedures (TTPs) these actors have been found using for initial exploitation, persistence, collection, and exfiltration. Indicators of compromise (IOCs) and common vulnerabilities and exposures (CVEs) exploited by the APT actors are also detailed.
+Further, the report provides threat hunting guidance and specific mitigations that organizations are encouraged to implement to search for malicious activity and reduce the threat of Chinese state-sponsored and other APT actors. These recommendations are especially important for network defenders of telecommunications and critical infrastructure organizations to discover unknown intrusions and prevent undetected malicious activity on their networks. By utilizing the outlined guidance, organizations can also better provide compromise details to appropriate authorities to continue improving all parties’ understanding of initial access methods.
+When threat hunting, the authoring agencies advise that organizations gain a full understanding of the APT actors’ accesses before implementing visible incident response and mitigation actions to maximize the chance of achieving full eviction from compromised networks.
+This CSA is being released by the following authoring and co-sealing agencies:
+United States National Security Agency (NSA)
+United States Cybersecurity and Infrastructure Security Agency (CISA)
+United States Federal Bureau of Investigation (FBI)
+United States Department of Defense Cyber Crime Center (DC3)
+Australian Signals Directorate’s Australian Cyber Security Centre (ASD’s ACSC)
+Canadian Centre for Cyber Security (Cyber Centre)
+Canadian Security Intelligence Service (CSIS)
+New Zealand National Cyber Security Centre (NCSC-NZ)
+United Kingdom National Cyber Security Centre (NCSC-UK)
+Czech Republic National Cyber and Information Security Agency (NÚKIB)
+Finnish Security and Intelligence Service (SUPO)
+Germany Federal Intelligence Service (BND)
+Germany Federal Office for the Protection of the Constitution (BfV)
+Germany Federal Office for Information Security (BSI)
+Italian External Intelligence and Security Agency (AISE)
+Italian Internal Intelligence and Security Agency (AISI)
+Japan National Cybersecurity Office (NCO)
+Japan National Police Agency (NPA)
+Netherlands Defence Intelligence and Security Service (MIVD)
+Netherlands General Intelligence and Security Service (AIVD)
+Polish Military Counterintelligence Service (SKW)
+Polish Foreign Intelligence Agency (AW)
+Spain National Intelligence Centre (CNI)
+Read the full report here.
+Visit our full library for more cybersecurity information and technical guidance
+.
+NSA Media Relations
+MediaRelations@nsa.gov
+443-634-0721
+SHARE
+PRINT
+Related Documents
+CSA: Countering China State Actors Compromise of Networks
+cybersecurity
+cybersecurity advisory
+csa
+China
+PRC
+telecommunications
+network defenders
+nss
+DIB
+Critical Infrastructure
+NSA.GOV
+About
+Leadership
+Cybersecurity Collaboration
+Center
+National Cryptologic Museum
+Contact NSA
+Accessibility
+ABA Notice
+Site Policies
+CULTURE
+Operating Authorities
+Civil Liberties, Privacy, Transparency Office
+Compliance
+General Counsel
+NSA Inspector General
+HELPFUL LINKS
+NSA Freedom of Information Act
+Privacy Act Requests
+Request a Speaker
+Prepublication Review
+Media Inquiry
+Frequently Asked Questions
+Scams & Safety
+Reasonable Accommodations Process
+Personal Assistance Services
+Office of Discrimination Complaints
+FY2024 Strategic Plan for the Recruitment, Hiring, Advancement, and Retention of Persons With Disabilities
+RESOURCES
+Classified Materiel Conversion
+Commercial Solutions for Classified Program (CSfC)
+​
+Cryptographic Support Services
+Media Destruction Guidance
+NSA Open Source
+Zero Trust Implementation Guidelines
+RELATED LINKS
+DNI.gov
+War.gov
+IC on the Record
+Intelligence.gov
+Privacy & Security
+Links Disclaimer
+Section 508
+Web Policy
+Plain Writing Act
+DOW IG
+No FEAR Act
+Imagery Use
+FOIA
+Open GOV
+Strategic Plan
+USA.gov
+Small Business Act
+Site Map
+NSA.GOV
+About
+Leadership
+Cybersecurity Collaboration Center
+National Cryptologic Museum
+Contact NSA
+Accessibility
+ABA Notice
+Site Policies
+CULTURE
+Operating Authorities
+Civil Liberties & Privacy
+General Counsel
+NSA Inspector General
+HELPFUL LINKS
+NSA Freedom of Information Act
+Frequently Asked Questions
+Privacy Act Requests
+Request a Speaker
+Prepublication Review
+Media Inquiry
+Reasonable Accommodations Process
+Scams & Safety
+Personal Assistance Services
+RESOURCES
+Commercial Solutions for Classified Material (CSFC)
+Media Destruction Guidance
+Classified Materiel Conversion
+Cross Domain Services
+NSA Open Source
+NSA Exhibit Roadshow
+Zero Trust Implementation Guidelines
+RELATED LINKS
+DNI.gov
+Defense.gov
+IC on the Record
+Intelligence.gov
+Hosted by WEB.mil

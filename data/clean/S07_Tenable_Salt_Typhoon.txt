@@ -1,0 +1,844 @@
+Salt Typhoon: An Analysis of Vulnerabilities Exploited by this State-Sponsored Actor - Blog | Tenable®
+Skip to Main Navigation
+Skip to Main Content
+Skip to Footer
+Tenable
+Platform
+Solutions
+Why Tenable
+Resources
+Company
+Pricing
+contact_icon
+English
+Deutsch
+Français (France)
+Español (América Latina)
+Português (Brasil)
+Italiano
+简体中文
+繁體中文
+日本語
+한국어
+العربية
+Tenable Product Login
+Community & Support
+CyberAgents Exchange
+Buy
+Try
+Exposure Management
+Manage cyber risk with one platform to find, prioritize and eliminate exposures across your attack surface.
+Find out more
+AI Security
+Cloud Security
+OT Security
+Vulnerability Management
+Hexa AI
+Identity Security
+Patch Management
+Attack Surface Management
+Web App Scanning
+Security Tool Connectors
+View all products
+Explore By Use Case
+Secure AI
+Secure OT/IoT
+Exposure Management
+Cloud Security
+Compliance
+Vulnerability Management
+Asset Inventory
+Highly Secure Environments
+Secure Data Centers
+Zero-Trust
+Explore By Industry
+Financial Services
+Energy
+Healthcare
+Technology
+Education
+Government Defense
+Retail
+Why choose Tenable
+Industry recognition
+Customer stories
+Tenable vs competitors
+Report
+Tenable is the one clear leader in Exposure Management
+See why
+Resource library
+Blog
+Research center
+Cybersecurity guide
+Services
+Training and certification
+Customer stories
+Find a partner
+Resources
+Resource library
+Accelerate your exposure management strategy with practical resources and tools.
+Explore
+About Tenable
+Leadership
+Investor relations
+Tenable ventures
+Awards and recognition
+Media room
+Careers
+Engagement and inclusion
+Exposure Management Leadership Council
+Platform
+Solutions
+Why Tenable
+Resources
+Company
+Pricing
+CyberAgents Exchange
+contact_icon
+English
+Deutsch
+Français (France)
+Español (América Latina)
+Português (Brasil)
+Italiano
+简体中文
+繁體中文
+日本語
+한국어
+العربية
+Tenable Product Login
+Community & Support
+Buy
+Try
+Platform
+Exposure Management
+AI Security
+Cloud Security
+OT Security
+Vulnerability Management
+Hexa AI
+Identity Security
+Patch Management
+Attack Surface Management
+Web App Scanning
+Security Tool Connectors
+View all products
+Solutions
+Explore By Use Case
+Secure AI
+Secure OT/IoT
+Exposure Management
+Cloud Security
+Compliance
+Vulnerability Management
+Asset Inventory
+Highly Secure Environments
+Secure Data Centers
+Zero-Trust
+Explore By Industry
+Financial Services
+Energy
+Healthcare
+Technology
+Education
+Government Defense
+Retail
+Why Tenable
+Why choose Tenable
+Industry recognition
+Customer stories
+Tenable vs competitors
+Report
+Tenable is the one clear leader in Exposure Management
+See why
+Resources
+Resource library
+Blog
+Research center
+Cybersecurity guide
+Services
+Training and certification
+Customer stories
+Find a partner
+Resources
+Resource library
+Accelerate your exposure management strategy with practical resources and tools.
+Explore
+Company
+About Tenable
+Leadership
+Investor relations
+Tenable ventures
+Awards and recognition
+Media room
+Careers
+Engagement and inclusion
+Exposure Management Leadership Council
+Blog
+Cyber Exposure Alerts
+Salt Typhoon: An Analysis of Vulnerabilities Exploited by this State-Sponsored Actor
+By
+Scott Caveza
+Jan 23 2025
+10 minute read
+Subscribe
+Salt Typhoon, a state-sponsored actor linked to the People’s Republic of China, has breached at least nine U.S.-based telecommunications companies with the intent to target high profile government and political figures. Tenable Research examines the tactics, techniques and procedures of this threat actor.
+Background
+Throughout 2024, attacks from sophisticated advanced persistent threat (APT) actors associated with the People’s Republic of China (PRC) were a major focus for U.S. government organizations, including the Cybersecurity and Infrastructure Security Agency (CISA). In a previous blog post, we examined
+Volt Typhoon
+, a PRC state-sponsored actor known to target critical infrastructure. However in September, the
+Wall Street Journal reported
+on another PRC actor, Salt Typhoon, citing anonymous sources who said that the group had breached multiple U.S. telecommunications providers. While several outlets reported on speculation of the report, in early October, CISA and the Federal Bureau of Investigation (FBI) offered official confirmation of the attacks when they released a
+joint statement
+that “the U.S. Government is investigating the unauthorized access to commercial telecommunications infrastructure by actors affiliated with the People’s Republic of China.” By December, a White House press call confirmed that at least eight U.S. telecommunications providers had been breached, with that figure increasing to at least
+nine telecommunications companies
+by December 27. As new details emerge on Salt Typhoon and its targets, this Tenable Research blog examines the tactics, techniques and procedures (TTPs) employed, including the exploitation of known vulnerabilities associated with this threat actor.
+Analysis
+Salt Typhoon is a sophisticated threat group whose targets include the telecommunications, government and technology sectors. The group is tracked under several monikers, including FamousSparrow, GhostEmperor, Earth Estries and UNC2286. This APT has most recently been in the news for breaching multiple U.S. telecommunications providers; however it’s believed that its targets in this sector span the globe. In the U.S, government officials claimed that Salt Typhoon’s targets include government officials primarily involved in “political activity,” sparking
+CISA and joint partners
+to release guidance on visibility and security hardening of communications infrastructure as well prompting the White House to issue the
+Executive Order
+titled “
+Strengthening and Promoting Innovation in the Nation’s Cybersecurity
+.” Based on various reports on Salt Typhoon, its primary objective appears to be espionage.
+In mid-December, CISA released the document “
+Mobile Communications Best Practice Guidance
+,” with an emphasis on using end-to-end encryption for secure communications. While it’s unclear what information may have been accessed by Salt Typhoon, CISA and other government agencies, including the
+Federal Communications Commission
+(FCC) have been actively helping and providing security guidance to the impacted organizations, as communications infrastructure is a matter of national security.
+Known CVEs commonly exploited by Salt Typhoon
+Salt Typhoon typically gains initial access to its victim networks by targeting external-facing assets using known vulnerabilities. While not an exhaustive list, the table below highlights some of the CVEs known to have been exploited by Salt Typhoon.
+CVE
+Description
+CVSSv3 Score
+VPR
+CVE-2021-26855
+Microsoft Exchange Server Server-Side Request Forgery Vulnerability (ProxyLogon)
+9.8
+9.8
+CVE-2022-3236
+Sophos Firewall Code Injection Vulnerability
+9.8
+7.4
+CVE-2023-48788
+FortiClient Enterprise Management Server (FortiClientEMS) SQL Injection Vulnerability
+9.8
+9.4
+CVE-2024-21887
+Ivanti Connect Secure and Ivanti Policy Secure Command Injection Vulnerability
+9.1
+9.8
+CVE-2023-46805
+Ivanti Connect Secure and Ivanti Policy Secure Authentication Bypass Vulnerability
+8.2
+6.7
+*Please note: Tenable’s
+Vulnerability Priority Rating (VPR)
+scores are calculated nightly. This blog post was published on January 23 and reflects VPR at that time.
+Several of these vulnerabilities have been
+routinely exploited
+by APT and ransomware groups alike, including CVE-2021-26855, also known as
+ProxyLogon
+, and
+related Microsoft Exchange vulnerabilities
+including CVE-2021-26857, CVE-2021-26858 and CVE-2021-27065.
+Ivanti Connect Secure/Policy Secure
+and
+Fortinet FortiClientEMS
+have each been the subject of Tenable Research blog posts and CVE-2022-3236, the SQL injection flaw in Sophos Firewall, was featured in our “
+2022 Threat Landscape Report
+.”
+Of these five CVEs, four of them were exploited in the wild as zero-day vulnerabilities. While it’s unknown if Salt Typhoon exploited any of these flaws as zero-days, the level of sophistication from the group does suggest it has the technical ability to develop and exploit zero-day flaws in its attacks.
+Despite these CVEs having had patches available, an analysis of anonymized Tenable scan data reveals that of nearly 30,000 instances impacted by ProxyLogon, a staggering 91% remain unpatched. In a stark contrast, an analysis of over 20,000 devices impacted by both Ivanti vulnerabilities (CVE-2023-46805 and CVE-2024-21887), our data found that these devices were fully remediated in over 92% of cases.
+As part of CISA’s guidance for enhanced visibility and hardening, the agency mentioned Cisco network equipment. While CISA didn’t mention specific Cisco device models or vulnerabilities, its guidance does note that PRC-affiliated actors have targeted Cisco-specific devices and as such, care should be taken to ensure organizations in the communications sector and beyond are properly securing and hardening their Cisco network devices. CISA’s recommendations include disabling Cisco’s Smart Install service, which is often
+abused
+by
+attackers
+and should be
+properly configured
+or disabled to prevent abuse.
+Post-Compromise Activity
+Salt Typhoon is known for maintaining a stealthy presence on victim networks and remaining undetected for a significant time period. It maintains persistence by utilizing custom malware including GhostSpider, SnappyBee and the Masol remote access trojan (RAT).
+It’s been reported that the group has been active for several years and may have breached and maintained access at telecommunications providers for months before being detected. In a recent
+blog by outgoing CISA Director Jen Easterly
+, she revealed that “CISA threat hunters previously detected the same actors in U.S. government networks.”
+The “eyes” of the various “Typhoons”
+Each suspected state-sponsored PRC actor includes the family name of “Typhoon.” In recent months, CISA and security vendors have issued several warnings regarding the various “Typhoon” groups, including Volt Typhoon, Flax Typhoon, and Salt Typhoon. Volt Typhoon’s
+focus is persistence and stealth
+, targeting critical infrastructure while Flax Typhoon’s focus is on attack infrastructure, building botnets from compromised Internet of Things (IoT) devices.
+While each group’s targets and activities are unique, the “eye” of each of these typhoons is they target unpatched and often well-known vulnerabilities for initial access, targeting public-facing servers. Despite the persistence of these threat actors, it's vital that organizations routinely patch public-facing devices and quickly mitigate known and exploited vulnerabilities. This is underscored in commentary from the
+Federal Communications Commission (FCC) Chairwoman Jessica Rosenworcel
+:
+“
+In light of the vulnerabilities exposed by Salt Typhoon, we need to take action to secure our networks. Our existing rules are not modern. It is time we update them to reflect current threats so that we have a fighting chance to ensure that state-sponsored cyberattacks do not succeed. The time to take this action is now. We do not have the luxury of waiting.
+”
+Identifying affected systems
+Tenable offers several solutions to help identify potential exposures and attack paths as well as to identify systems vulnerable to the CVEs mentioned in this blog. For a holistic approach, we recommend using the
+Tenable One Exposure Management Platform
+. Tenable One extends beyond traditional vulnerability management, which concentrates on the discovery and remediation of publicly disclosed CVEs. A foundational part of any exposure management program, Tenable One includes data about configuration issues, vulnerabilities and attack paths across a spectrum of assets and technologies — including identity solutions (e.g., Active Directory); cloud configurations and deployments; and web applications.
+Tenable Plugin Coverage
+A list of Tenable plugins for these vulnerabilities can be found on the individual CVE pages for
+CVE-2021-26855
+,
+CVE-2022-3236
+,
+CVE-2023-48788
+,
+CVE-2024-21887
+and
+CVE-2023-46805
+. These links will display all available plugins for these vulnerabilities, including upcoming plugins in our
+Plugins Pipeline
+. In addition to these CVEs, we also recommend scanning with
+plugin ID 105161
+to identify if Cisco Smart Install is enabled on any Cisco devices in your network.
+Tenable Attack Path Analysis techniques
+The following are a list of attack paths associated with Salt Typhoon and the associated
+Tenable Attack Path Analysis
+techniques:
+MITRE ATT&CK ID
+Description
+Tenable Attack Path techniques
+T1003.003
+OS Credential Dumping: NTDS
+T1003.003_Windows
+T1021
+Remote Services
+T1021.002_Windows
+T1047
+Windows Management Instrumentation
+T1047_Windows
+T1053.005
+Create or Modify System Process: Windows Service
+T1053.005_Windows
+T1059.001
+Command and Scripting Interpreter: PowerShell
+T1059.001_Windows
+T1059.003
+Command and Scripting Interpreter: Windows Command Shell
+T1059.003_Windows
+T1068
+Exploitation for Privilege Escalation
+T1068_Windows
+T1078
+Valid Accounts
+T1078.001_ICS
+T1078.003_Windows
+T1078.004_Azure
+T1078.002
+Valid Accounts: Domain Accounts
+T1078.002_Windows
+T1082
+System Information Discovery
+T1082
+T1087
+Account Discovery
+T1087.004_Azure
+T1087.004_AWS
+T1134
+Access Token Manipulation
+T1134.005_Windows
+T1190
+Exploit Public-Facing Application
+T1190_Aws
+T1190_WAS
+T1203
+Exploitation for Client Execution
+T1203_Windows
+T1482
+Domain Trust Discovery
+T1482_Windows
+T1547
+Boot or Logon Autostart Execution
+T1547.002_Windows
+T1547.005_Windows
+T1574
+Hijack execution flow
+T1574.007_Windows
+T1574.009_Windows
+T1574.010_Windows
+T1574.011_Windows
+Tenable Identity Exposure Indicators of Exposure and Indicators of Attack
+The following are a list of Indicators of Exposure and Indicators of Attack for
+Tenable Identity Exposure
+:
+MITRE ATT&CK ID
+Description
+Indicators
+T1003.003
+OS Credential Dumping: NTDS
+I-NtdsExtraction
+T1021
+Remote Services
+C-LAPS-UNSECURE-CONFIG
+C-AAD-PRIV-SYNC
+C-USERS-REVER-PWDS
+T1036
+Masquerading
+C-CONFLICTED-OBJECTS
+T1055.001
+Process Injection: Dynamic-link Library Injection
+I-DnsAdmins
+T1068
+Exploitation for Privilege Escalation
+I-SamNameImpersonation
+T1078
+Valid Accounts
+MISSING-MFA-FOR-NON-PRIVILEGED-ACCOUNT
+C-PASSWORD-DONT-EXPIRE
+C-USER-PASSWORD
+C-PRIV-ACCOUNTS-SPN
+C-NATIVE-ADM-GROUP-MEMBERS
+C-AAD-SSO-PASSWORD
+C-MSA-COMPLIANCE
+C-PASSWORD-POLICY
+C-REVER-PWD-GPO
+C-CLEARTEXT-PASSWORD
+C-DC-ACCESS-CONSISTENCY
+C-PROP-SET-SANITY
+C-SLEEPING-ACCOUNTS
+C-KERBEROS-CONFIG-ACCOUNT
+HIGH-NUMBER-OF-ADMINISTRATORS
+MISSING-MFA-FOR-PRIVILEGED-ACCOUNT
+C-AUTH-SILO
+C-KRBTGT-PASSWORD
+C-AAD-PRIV-SYNC
+C-SERVICE-ACCOUNT
+C-PASSWORD-NOT-REQUIRED
+C-ADMIN-RESTRICT-AUTH
+C-ADMINCOUNT-ACCOUNT-PROPS
+C-DANGEROUS-SENSITIVE-PRIVILEGES
+C-PKI-DANG-ACCESS
+C-EXCHANGE-MEMBERS
+C-PASSWORD-HASHES-ANALYSIS
+C-ADM-ACC-USAGE
+C-DANG-PRIMGROUPID
+C-DSHEURISTICS
+T1134
+Access Token Manipulation
+C-ACCOUNTS-DANG-SID-HISTORY
+T1190
+Exploit Public-Facing Application
+APPLICATION-ALLOWING-MULTI-TENANT-AUTHENTICATION
+T1203
+Exploitation for Client Execution
+C-OBSOLETE-SYSTEMS
+Tenable
+Web App Scanning
+MITRE ATT&CK ID
+Description
+Indicators
+T1190
+Exploit Public-Facing Application
+T1190_WAS
+Get more information
+Tenable Blog:
+Volt Typhoon: U.S. Critical Infrastructure Targeted by State-Sponsored Actors
+Wall Street Journal:
+China-Linked Hackers Breach U.S. Internet Providers in New ‘Salt Typhoon’ Cyberattack
+Tenable Blog:
+New Cybersecurity Executive Order: What It Means for Federal Agencies
+The White House:
+Executive Order on Strengthening and Promoting Innovation in the Nation’s Cybersecurity
+CISA:
+Mobile Communications Best Practice Guidance
+CISA:
+Enhanced Visibility and Hardening Guidance for Communications Infrastructure
+CISA:
+Strengthening America’s Resilience Against the PRC Cyber Threats
+Tenable Blog:
+Top 20 CVEs Exploited by People's Republic of China State-Sponsored Actors (AA22-279A)
+Tenable Blog:
+Finding Proxylogon and Related Microsoft Exchange Vulnerabilities: How Tenable Can Help
+Tenable Blog:
+CVE-2023-46805, CVE-2024-21887, CVE-2024-21888 and CVE-2024-21893: Frequently Asked Questions for Vulnerabilities in Ivanti Connect Secure and Policy Secure Gateways
+Tenable Blog:
+CVE-2023-48788: Critical Fortinet FortiClientEMS SQL Injection Vulnerability
+Tenable Whitepaper:
+Tenable 2022 Threat Landscape Report
+Join
+Tenable's Security Response Team
+on the Tenable Community.
+Learn more about
+Tenable One
+, the Exposure Management Platform for the modern attack surface.
+Author
+Learn more
+Scott Caveza
+Senior Staff Research Engineer, Research Special Operations
+Scott joined Tenable in 2012 as a Research Engineer on the Nessus Plugins team. Over the years, he has written hundreds of plugins for Nessus, and reviewed code for even more from his time being a team lead and manager of the Plugins team. Previously leading the Security Response team and the Zero D...
+Read more
+Learn more
+Related articles
+Products
+Nov 20 2026
+How exposure management can help public sector prepare for PHP2Shell-like…
+By
+Kate Boronkay
+Products
+Nov 19 2026
+Identity context is essential for exposure management: Tenable One adds ways to…
+By
+Trevor Lyness
+Cyber Exposure Alerts
+Nov 18 2026
+NGINX2Root (CVE-2026-123007): Frequently asked questions about five critical…
+By
+Alexis Clark
+Exposure Management
+Vulnerability Management
+Tenable One Identity Exposure
+Tenable Nessus
+Tenable One
+Tenable Security Center
+Tenable Security Center Plus
+Tenable One Vulnerability Management
+Tenable One Web App Scanning
+Your exposure ends
+here
+Partners
+Become a partner
+Find a partner
+Partner portal
+Partner programs
+Resources
+Services
+Technical support
+Training and certifications
+Product documentation
+Customer community
+Tenable Trust
+CyberAgents Exchange
+Status
+Company
+About us
+Executive team
+Newsroom
+Investor relations
+Connect
+Contact us
+Try our product
+Chat with sales
+Meet us at an event
+Join us
+Privacy policy
+Do not sell/share my personal information
+Legal
+508 compliance
+© 2026 Tenable®, Inc. All rights reserved
+Tenable One
+Request a demo
+The world’s leading AI-powered exposure management platform.
+Thank You
+Thank you for your interest in Tenable One.
+A representative will be in touch soon.
+Debug:
+Form ID: 7469
+Form Name: one-eval
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: one-eval-form-wrapper
+Confirmation Class: one-eval-confirmform-modal
+Simulate Success
+Tenable One Cloud Exposure
+Request a demo
+Close cloud exposure with the actionable cloud security platform.
+Thank You
+Thank you for your interest in Tenable One Cloud Exposure.
+A representative will be in touch soon.
+Debug:
+Form ID: 10155
+Form Name: tenable-cs
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: tenable-cs-form-wrapper
+Confirmation Class: tenable-cs-confirmform-modal
+Simulate Success
+Tenable Security Center
+Request a demo
+Identify and prioritize vulnerabilities based on risk to your business. Managed on premises.
+Thank You
+Thank you for your interest in Tenable Security Center.
+A representative will be in touch soon.
+Debug:
+Form ID: 3504
+Form Name: tenable-sc-eval
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: tenable-sc-eval-form-wrapper
+Confirmation Class: tenable-sc-eval-confirmform-modal
+Simulate Success
+Tenable Patch Management
+Request a demo
+Streamline security and IT collaboration and shorten the mean time to remediate with automation.
+Thank You
+Thank you for your interest in Tenable Patch Management.
+A representative will be in touch soon.
+Debug:
+Form ID: 13149
+Form Name: patch-mgmt
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: patch-mgmt-form-wrapper
+Confirmation Class: patch-mgmt-confirmform-modal
+Simulate Success
+Tenable Enclave Security
+Request a demo
+Identify, understand and close IT and container vulnerabilities.
+Thank You
+Thank you for your interest in Tenable Enclave Security.
+A representative will be in touch soon.
+Debug:
+Form ID: 12543
+Form Name: enclave
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: enclave-form-wrapper
+Confirmation Class: enclave-confirmform-modal
+Simulate Success
+Tenable One Attack Surface Management
+Request a demo
+Gain visibility into your internet-connected assets to eliminate blind spots and unknown sources of risk.
+Thank You
+Thank you for your interest in Tenable One Attack Surface Management.
+A representative will be in touch soon.
+Debug:
+Form ID: 6937
+Form Name: asm-eval
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: asm-eval-form-wrapper
+Confirmation Class: asm-eval-confirmform-modal
+Simulate Success
+Tenable One AI Exposure
+Request a demo
+See, secure, and manage how your teams use AI tools.
+Thank You
+Thank you for your interest in Tenable One AI Exposure.
+A representative will be in touch soon.
+Debug:
+Form ID: 14854
+Form Name: ai-exposure
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: ai-exposure-form-wrapper
+Confirmation Class: ai-exposure-confirmform-modal
+Simulate Success
+Tenable One OT Exposure
+Request a demo
+Close OT exposure with the unified security solution for converged OT/IT environments.
+Thank You
+Thank you for your interest in Tenable One OT Exposure.
+A representative will be in touch soon.
+Debug:
+Form ID: 3879
+Form Name: ot-eval
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: ot-eval-form-wrapper
+Confirmation Class: ot-eval-confirmform-modal
+Simulate Success
+Tenable One Identity Exposure
+Request a demo
+Close identity exposure with the essential solution for the identity-intelligent enterprise.
+Thank You
+Thank you for your interest in Tenable One Identity Exposure.
+A representative will be in touch soon.
+Debug:
+Form ID: 4178
+Form Name: ad-eval
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: ad-eval-form-wrapper
+Confirmation Class: ad-eval-confirmform-modal
+Simulate Success
+Why Tenable
+See Tenable in action
+Want to see how Tenable can help your team find and fix critical cyber weaknesses that put your business at risk? Complete this form to get a custom quote or demo.
+Thank you
+You should receive a confirmation email shortly and one of our representatives will be in touch.
+Debug:
+Form ID: 13427
+Form Name: why-compare-form
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: why-compare-form-form-wrapper
+Confirmation Class: why-compare-form-confirmform-modal
+Simulate Success
+SLCGP
+Learn How Tenable Helps Achieve SLCGP Cybersecurity Plan Requirements
+Tenable solutions help fulfill all SLCGP requirements. Connect with a Tenable representative to learn more.
+Thank You
+You should receive a confirmation email shortly and one of our Sales Development Representatives will be in touch. Route any questions to
+[email protected]
+.
+Debug:
+Form ID: 10616
+Form Name: slcgp
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments c-form--compact
+Form Wrapper ID: slcgp-form-wrapper
+Confirmation Class: slcgp-confirmform-modal
+Simulate Success
+Subscribe
+Cybersecurity news you can use
+Enter your email and never miss timely alerts and security guidance from the experts at Tenable.
+Thank you for subscribing!
+Debug:
+Form ID: 3971
+Form Name: blog-subscribe
+Form Class: c-form form-panel__global-form  c-form--mkto js-mkto-no-css js-form-hanging-label c-form--hide-comments
+Form Wrapper ID: blog-subscribe-form-wrapper
+Confirmation Class: blog-subscribe-confirmform-modal
+Simulate Success
+Try for free
+Tenable One Vulnerability Management
+You're a step away from a free trial
+Enjoy full access to a modern, cloud-based vulnerability management platform that enables you to see and
+          track all of your assets with unmatched accuracy.
+Your Tenable One Vulnerability Management trial also includes Tenable One Web App Scanning.
+Buy now
+Tenable One Vulnerability Management
+Enjoy full access to a modern, cloud-based vulnerability management platform that enables you to see and
+          track all of your assets with unmatched accuracy.
+Purchase your annual subscription today.
+Number of assets
+100
+Choose your subscription
+1 Year
+$3,500
+2 Years
+$6,825
+3 Years
+$9,975
+Buy now
+Please contact us or a
+Tenable
+              partner.
+Thank You
+Thank you for your interest in Tenable One Vulnerability Management.
+A representative will be in touch soon.
+Debug:
+Form ID: 3174
+Form Name: vm
+Form Class: c-form   c-form--mkto js-mkto-no-css js-form-hanging-label
+Form Wrapper ID: vm-form-wrapper
+Confirmation Class: vm-confirmform-modal
+Simulate Success
+Try for free
+Tenable One Web App Scanning
+You're a step away from a free trial
+Enjoy full access to our latest web application scanning offering designed for modern applications as part of the Tenable One Exposure Management platform. Safely scan your entire online portfolio for vulnerabilities with a high degree of accuracy without heavy manual effort or disruption to critical web applications.
+Sign up now.
+Your Tenable One Web App Scanning trial also includes Tenable One Vulnerability Management.
+Buy now
+Buy Tenable One Web App Scanning
+Enjoy full access to a modern, cloud-based vulnerability management platform that enables you to see and track all of your assets with unmatched accuracy.
+Purchase your annual subscription today.
+FQDNs
+5
+$3,578
+Buy now
+Please contact us or a
+Tenable partner.
+Thank You
+Thank you for your interest in Tenable Web App Scanning.
+A representative will be in touch soon.
+Debug:
+Form ID: 3258
+Form Name: was
+Form Class: c-form   c-form--mkto js-mkto-no-css js-form-hanging-label
+Form Wrapper ID: was-form-wrapper
+Confirmation Class: was-confirmform-modal
+Simulate Success
+Try for free
+Tenable Nessus Professional
+You're a step away from a free trial
+Tenable Nessus is the most comprehensive vulnerability scanner on the market today. Fill out the form below to continue with a Nessus Pro trial.
+Buy now
+Buy Tenable Nessus Professional
+Buy a multi-year license and save. Add Advanced Support for access to phone, community, and chat support 24 hours a day, 365 days a year.
+Select your license
+Buy a multi-year license and save more.
+1 Year
+$4,790
+2 Years
+$9,330.95
+(Save
+)
+3 Years
+$13,637.54
+(Save
+)
+Add support and training
+Advanced Support
+$400
+24x365 Access to phone, email, community, and chat support.
+More info
+.
+On-Demand Training
+$275
+1 Year Access to the Nessus Fundamentals On-Demand Video Course for 1 person.
+More info
+.
+Buy now
+Renew an existing license
+Find a reseller
+*VAT incl.
+Try for free
+Tenable Nessus Expert
+You're a step away from a free trial
+Built for the modern attack surface, Nessus Expert enables you to see more and protect your organization from vulnerabilities from IT to the cloud.
+Already have Tenable Nessus Professional?
+Upgrade to Nessus Expert free for 7 days.
+Buy now
+Buy Nessus Expert
+Select your license
+Buy a multi-year license and save more.
+1 Year
+$6,790
+*
+Save
+2 Years
+$13,208.13
+*
+(Save
+)
+3 Years
+$19,304.19
+*
+(Save
+)
+Add support and training
+Advanced Support
+$400
+24x365 Access to phone, email, community, and chat support.
+More info
+.
+Nessus Fundamentals
+$275
+1 Year Access to the Nessus Fundamentals On-Demand Video Course for 1 person.
+More info
+.
+Nessus Fundamentals + Nessus Advanced
+$385
+1 Year Access to the Nessus Fundamentals and Nessus Advanced On-Demand Video Courses for 1 person.
+More info
+.
+Buy now
+Renew an existing license
+Find a reseller
+With Advanced Support for Nessus Pro, your teams will have access to phone,
+          Community, and chat support 24 hours a day, 365 days a year. This advanced level of technical support
+          helps to ensure faster response times and resolution to your questions and issues.
+Advanced Support Plan Features
+Phone Support
+Phone support 24 hours a day, 365 days a year, available for up to ten (10) named support contacts.
+Chat Support
+Chat support available to named support contacts, accessible via the Tenable Community is available
+          24 hours a day, 365 days a year.
+Tenable Community Support Portal
+All named support contacts can open support cases within the Tenable Community. Users can also access
+          the Knowledge Base, documentation, license information, technical support numbers, etc.; utilize live
+          chat, ask questions to the Community, and learn about tips and tricks from other Community members.
+Initial Response Time
+P1-Critical: < 2 hr
+P2-High: < 4 hr
+P3-Medium: < 12 hr
+P4-Informational:
+          < 24 hr
+Support Contacts
+Support contacts must be reasonably proficient in the use of information technology, the software
+          they have purchased from Tenable, and familiar with the customer resources that are monitored by means
+          of the software. Support contacts must speak English and conduct support requests in English. Support
+          contacts must provide information reasonably requested by Tenable for the purpose of reproducing any
+          Error or otherwise resolving a support request.

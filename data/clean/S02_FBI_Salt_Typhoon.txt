@@ -1,0 +1,24 @@
+FBI
+is issuing this announcement to ask the public to report information about
+PRC
+-affiliated activity publicly tracked as "Salt Typhoon" and the compromise of multiple US telecommunications companies, especially information about specific individuals behind the campaign. Investigation into these actors and their activity revealed a broad and significant cyber campaign to leverage access into these networks to target victims on a global scale. This activity resulted in the theft of call data logs, a limited number of private communications involving identified victims, and the copying of select information subject to court-ordered US law enforcement requests.
+FBI and US Government partners have previously released public statements on Salt Typhoon activity on
+25 October 2024
+and
+13 November 2024
+, and published the guide, "
+Enhanced Visibility and Hardening Guidance for Communications Infrastructure
+," on 3 December 2024.
+FBI maintains its commitment to protecting the US telecommunications sector and the individuals and organizations targeted by Salt Typhoon by identifying, mitigating, and disrupting Salt Typhoon's malicious cyber activity. If you have any information about the individuals who comprise Salt Typhoon or other Salt Typhoon activity, we would particularly like to hear from you.
+In addition, the U.S. Department of State's
+Rewards for Justice (
+RFJ
+) program
+is offering a reward of up to $10 million (
+USD
+) for information about foreign government-linked individuals participating in certain malicious cyber activities against US critical infrastructure in violation of the Computer Fraud and Abuse Act (
+CFAA
+).
+If you have any information on Salt Typhoon, contact your local FBI field office, file a report on the FBI's Internet Crime Complaint Center at
+www.ic3.gov
+, or submit your tip to RFJ on Signal at +1-202-702-7843 or via the RFJ Tor-based tip line: he5dybnt7sr6cm32xt77pazmtm65flqy6irivtflruqfc5ep7eiodiad.onion (Tor browser required).

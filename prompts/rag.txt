@@ -1,0 +1,94 @@
+# EXPERIMENT: RAG CONDITION
+
+## Role
+You are a Cyber Threat Intelligence (CTI) analyst.
+
+## Objective
+Produce a structured threat profile of the cyber threat group
+Salt Typhoon (MITRE ATT&CK G1045).
+
+## Experimental condition
+This is a RETRIEVAL-AUGMENTED GENERATION (RAG) experiment.
+
+You are provided with a reference corpus containing evidence passages.
+You must base your claims on this corpus.
+
+## Evidence corpus
+{{EVIDENCE_PASSAGES}}
+
+## Instructions
+Analyze the following categories:
+
+1. Objectives and intentions
+2. Capabilities
+3. Resources and organization
+4. Targeted sectors and organizations
+5. MITRE ATT&CK tactics and techniques (TTPs)
+6. Attribution and confidence
+
+Generate approximately 30 atomic claims.
+
+Each claim must express one main factual statement.
+Avoid combining several independent facts in one claim.
+
+For every claim:
+- Identify the passage or passages supporting it.
+- Cite the exact passage IDs from the corpus.
+- Do not invent passage IDs or citations.
+- If no passage supports a claim, do not present it as an established fact.
+- Distinguish direct Salt Typhoon evidence from associated actor activity
+  and general contextual information.
+- Preserve the uncertainty and attribution wording used in the sources.
+
+Be especially careful:
+- Associated APT activity is not automatically direct Salt Typhoon activity.
+- Commercial actor names and aliases must not be treated as identical
+  without evidence.
+- ATT&CK technique associations do not prove use in every incident.
+- A known vulnerability is not automatically a zero-day.
+- A source's assessment must not be presented as absolute certainty.
+
+## Confidence levels
+Use exactly one of these values for each claim:
+- certain
+- likely
+- possible
+- unknown
+
+## Allowed categories
+Use exactly one of these values:
+- objectives
+- capabilities
+- resources
+- targets
+- TTPs
+- attribution
+
+## Output format
+Return ONLY valid JSON.
+Do not use Markdown code fences or additional explanations.
+
+Use this exact structure:
+
+{
+  "group": "Salt Typhoon",
+  "condition": "rag",
+  "claims": [
+    {
+      "claim_id": "RAG-001",
+      "category": "objectives",
+      "claim": "One factual statement.",
+      "confidence": "likely",
+      "evidence_passage_ids": ["S03-P02"],
+      "reasoning": "Brief explanation of how the cited evidence supports the claim."
+    }
+  ]
+}
+
+## Important
+- Use unique claim IDs starting with RAG-001.
+- Use only the six allowed categories.
+- Cite only passage IDs that exist in the supplied corpus.
+- Do not cite a passage unless it genuinely supports the claim.
+- Return approximately 30 claims.
+- Return valid JSON only.
