@@ -1,0 +1,4 @@
+run_id,phase,date,model,model_id,condition,temperature,max_tokens,run_number,status,prompt_tokens,completion_tokens,cost_usd,latency_seconds,error_notes
+NEM-RAG-01,rehearsal,2026-11-26,Nemotron,nvidia/nemotron-3-ultra-550b-a55b:free,rag,0.2,2000,1,success,,,0,,Raw API metadata not retained in extracted JSON
+NEM-CB-01,rehearsal,2026-11-26,Nemotron,nvidia/nemotron-3-ultra-550b-a55b:free,closed_book,0.2,2000,1,success,469,1284,0,,
+GEM-AV-01,availability_check,2026-11-26,Gemma,google/gemma-4-26b-a4b-it:free,,0.2,128,,rate_limited,,,,,HTTP 429: upstream shared pool rate limit
