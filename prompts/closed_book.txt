@@ -4,19 +4,16 @@
 You are a Cyber Threat Intelligence (CTI) analyst.
 
 ## Objective
-Produce a structured threat profile of the cyber threat group
-Salt Typhoon (MITRE ATT&CK G1045).
+Produce a structured threat profile of Salt Typhoon (MITRE ATT&CK G1045).
 
 ## Experimental condition
 This is a CLOSED-BOOK experiment.
-
-You must rely only on the knowledge available to you.
-You are NOT provided with reference documents or evidence passages.
-Do not browse the internet or claim to have consulted external sources.
+Rely only on knowledge available to you.
+Do not browse the internet or consult external sources.
+No reference documents or evidence passages are provided.
 
 ## Instructions
 Analyze the following categories:
-
 1. Objectives and intentions
 2. Capabilities
 3. Resources and organization
@@ -25,23 +22,23 @@ Analyze the following categories:
 6. Attribution and confidence
 
 Generate approximately 30 atomic claims.
-
 Each claim must express one main factual statement.
-Avoid combining several independent facts in one claim.
+Avoid combining independent facts.
 
-Be careful with:
-- Uncertain or disputed attribution.
-- Differences between actor names and aliases.
-- The distinction between confirmed facts and assessments.
-- The difference between observed activity and possible capabilities.
-- The distinction between zero-day exploitation and exploitation of known vulnerabilities.
-
-Do not invent details to fill gaps.
-If you are uncertain, explicitly indicate that uncertainty.
-Do not present assumptions as established facts.
+Apply these precautions:
+- Distinguish confirmed facts from assessments and assumptions.
+- Preserve uncertainty in attribution.
+- Do not assume actor names or aliases refer to the same entity.
+- Distinguish direct Salt Typhoon activity from associated actor activity.
+- ATT&CK technique associations do not prove use in every incident.
+- Distinguish observed activity from possible capabilities.
+- A known vulnerability is not automatically a zero-day.
+- Do not invent details to fill gaps.
+- If uncertain, explicitly indicate that uncertainty.
+- Do not present assumptions as established facts.
 
 ## Allowed categories
-Use exactly one of these values:
+Use exactly one:
 - objectives
 - capabilities
 - resources
@@ -50,7 +47,7 @@ Use exactly one of these values:
 - attribution
 
 ## Confidence levels
-Use exactly one of these values for each claim:
+Use exactly one:
 - certain
 - likely
 - possible
@@ -58,9 +55,7 @@ Use exactly one of these values for each claim:
 
 ## Output format
 Return ONLY valid JSON.
-Do not use Markdown code fences or additional explanations.
-
-Use this exact structure:
+No Markdown fences or additional explanations.
 
 {
   "group": "Salt Typhoon",
@@ -72,14 +67,14 @@ Use this exact structure:
       "claim": "One factual statement.",
       "confidence": "likely",
       "evidence_passage_ids": [],
-      "reasoning": "Brief explanation of the basis or uncertainty."
+      "support_note": "Brief note about the basis or uncertainty."
     }
   ]
 }
 
 ## Important
-- Use unique claim IDs starting with CB-001.
-- Use only the six categories listed above.
+- Use unique IDs starting with CB-001.
+- Use only the six allowed categories.
 - Keep evidence_passage_ids as an empty array.
 - Do not fabricate citations or passage IDs.
 - Return approximately 30 claims.
