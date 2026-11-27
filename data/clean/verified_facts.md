@@ -34,3 +34,42 @@ Source: S04 - Joint Advisory
 Relevance: Context only
 Fact: The advisory describes compromises of telecommunications, government, transportation, lodging, and military networks.
 Caveat: These general observations must not automatically be attributed to Salt Typhoon individually.
+
+## F007 - Initial access and persistence observations
+Source: S08 - Cisco Talos
+Relevance: Direct, based on Talos investigations
+Fact: Talos determined that initial access to Cisco devices in the incidents it investigated was obtained through legitimate victim login credentials.
+Fact: Talos observed persistence across devices from multiple vendors, including one instance lasting more than three years.
+Caveat: These observations describe Talos-investigated incidents and should not be generalized to every Salt Typhoon operation.
+
+## F008 - Credential collection
+Source: S08 - Cisco Talos
+Relevance: Direct
+Fact: Talos observed collection of network credentials and secrets from SNMP, TACACS, and RADIUS traffic.
+Caveat: The report describes the likely purpose of some activity as obtaining additional credentials; preserve the report's qualification.
+
+## F009 - Configuration exfiltration and reconnaissance
+Source: S08 - Cisco Talos
+Relevance: Direct
+Fact: Talos observed network device configurations being transferred using TFTP or FTP.
+Fact: These configurations could expose authentication material and network information useful for reconnaissance and lateral movement.
+
+## F010 - JumbledPath
+Source: S08 - Cisco Talos
+Relevance: Direct
+Fact: Talos documented a custom utility named JumbledPath used for remote packet capture through a jump host.
+Fact: The report describes attempts to clear logs and impair logging during this activity.
+
+## F011 - RedMike activity and vulnerability exploitation
+Source: S09 - Recorded Future / Insikt Group
+Relevance: Associated / attribution caveat
+Fact: Recorded Future reported that RedMike attempted to exploit more than 1,000 Cisco devices.
+Fact: The report describes an exploitation sequence involving CVE-2023-20198 for initial access and CVE-2023-20273 to obtain root access.
+Caveat: Recorded Future assesses RedMike as associated with Salt Typhoon; this is an analytical attribution, not proof that the names identify exactly the same entity.
+
+## F012 - Observed compromised devices and GRE tunnels
+Source: S09 - Recorded Future / Insikt Group
+Relevance: Associated / attribution caveat
+Fact: Recorded Future observed seven compromised Cisco devices communicating with RedMike infrastructure.
+Fact: The report describes GRE tunnels between compromised Cisco devices and infrastructure, used for persistence and data exfiltration.
+Caveat: Distinguish more than 1,000 devices targeted from the seven compromised devices observed by Recorded Future. Preserve the report's RedMike attribution qualification.

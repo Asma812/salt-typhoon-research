@@ -48,7 +48,7 @@ Evaluation will consider evidence support, uncertainty preservation, claim quali
 
 ### 6. Dataset
 
-The reference corpus contains 29 evidence passages extracted from publicly available government and cybersecurity research sources.
+The reference corpus contains 41 evidence passages extracted from publicly available government and cybersecurity research sources.
 
 The corpus includes material from:
 
@@ -58,6 +58,8 @@ The corpus includes material from:
 - CISA, FBI, NSA and partner agencies
 - Canadian Centre for Cyber Security
 - Tenable Research
+- Cisco Talos
+- Recorded Future / Insikt Group
 
 Sources and passage identifiers are documented in the data directory.
 
