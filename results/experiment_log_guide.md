@@ -27,8 +27,8 @@ Record every model execution, including successful runs and failures.
 Examples:
 - NEM-CB-01: Nemotron, closed-book, run 1
 - NEM-RAG-01: Nemotron, RAG, run 1
-- GEM-CB-01: Gemma, closed-book, run 1
-- GEM-RAG-01: Gemma, RAG, run 1
+- ERN-CB-01: ERNIE, closed-book, run 1
+- ERN-RAG-01: ERNIE, RAG, run 1
 
 ## Reproducibility
 

@@ -17,7 +17,7 @@ Does evidence-grounded AI profiling produce more accurate, traceable and appropr
 Two models will be compared:
 
 - NVIDIA Nemotron 3 Ultra
-- Google Gemma 4 26B A4B
+- Baidu ERNIE 5.5 Flash Preview
 
 Two experimental conditions:
 
@@ -118,7 +118,7 @@ This preparation is disclosed to distinguish pre-event work from implementation 
 
 Pre-hackathon preparation is in its final verification stage.
 
-The preliminary rehearsals validated the basic prompt, response storage and annotation workflow. Gemma availability remains subject to upstream provider rate limits.
+The preliminary rehearsals validated the basic prompt, response storage and annotation workflow. Gemma was unavailable due to upstream rate limits and was replaced by Baidu ERNIE 5.5 Flash Preview. ERNIE passed preliminary API and JSON-format checks at zero cost.
 
 The official experimental pipeline, main model executions, repeated trials, result analysis and final evaluation will be conducted during the hackathon.
 
